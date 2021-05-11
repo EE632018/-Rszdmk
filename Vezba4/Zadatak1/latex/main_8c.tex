@@ -1,0 +1,61 @@
+\hypertarget{main_8c}{}\doxysection{main.\+c File Reference}
+\label{main_8c}\index{main.c@{main.c}}
+
+
+Aplikacija koja implementira ogranicen broj treptanja diode.  
+
+
+{\ttfamily \#include \char`\"{}pin.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}timer0.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pulsing.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+{\ttfamily \#include $<$avr/interrupt.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a01a38dd4c581bb40a916600e7f32f18e}\label{main_8c_a01a38dd4c581bb40a916600e7f32f18e}} 
+\#define \mbox{\hyperlink{main_8c_a01a38dd4c581bb40a916600e7f32f18e}{D\+I\+O\+D\+E\+\_\+\+P\+IN}}~5
+\begin{DoxyCompactList}\small\item\em Makro za selektovanje pina na koji je povezana dioda. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_a8091c2bcff55cbe0a4a145fd5fb7c22d}\label{main_8c_a8091c2bcff55cbe0a4a145fd5fb7c22d}} 
+\#define \mbox{\hyperlink{main_8c_a8091c2bcff55cbe0a4a145fd5fb7c22d}{F\+A\+ST}}~200
+\begin{DoxyCompactList}\small\item\em Makro za podesavanje periode u brzom rezimu treptanja. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_a5da43425fff36347c69fc3c090e42c6c}\label{main_8c_a5da43425fff36347c69fc3c090e42c6c}} 
+\#define \mbox{\hyperlink{main_8c_a5da43425fff36347c69fc3c090e42c6c}{S\+L\+OW}}~1000
+\begin{DoxyCompactList}\small\item\em Makro za podesavanje periode u sporom rezimu treptanja. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_ae70a242dacd886f6e5ee8b03d1f7dbcf}\label{main_8c_ae70a242dacd886f6e5ee8b03d1f7dbcf}} 
+\#define \mbox{\hyperlink{main_8c_ae70a242dacd886f6e5ee8b03d1f7dbcf}{F\+A\+S\+T\+\_\+\+R\+E\+P\+E\+T\+I\+T\+I\+O\+NS}}~15
+\begin{DoxyCompactList}\small\item\em Makro za podesavanje broja brzih treptaja. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_ab32eaa40c1f40f1594f108a8dea1fddd}\label{main_8c_ab32eaa40c1f40f1594f108a8dea1fddd}} 
+\#define \mbox{\hyperlink{main_8c_ab32eaa40c1f40f1594f108a8dea1fddd}{S\+L\+O\+W\+\_\+\+R\+E\+P\+E\+T\+I\+T\+I\+O\+NS}}~3
+\begin{DoxyCompactList}\small\item\em Makro za podesavanje broja sporih treptaja. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Aplikacija koja implementira ogranicen broj treptanja diode. 
+
+\begin{DoxyAuthor}{Author}
+Ime Prezime 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+14-\/03-\/2021 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+main -\/ funkcija koja implementiran glavni deo aplikacije \begin{DoxyReturn}{Returns}
+Nema povratnu vrednost 
+\end{DoxyReturn}
