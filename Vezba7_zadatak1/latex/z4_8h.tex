@@ -1,0 +1,83 @@
+\hypertarget{z4_8h}{}\doxysection{z4.\+h File Reference}
+\label{z4_8h}\index{z4.h@{z4.h}}
+
+
+H fajl pomocnih funkcija.  
+
+
+{\ttfamily \#include \char`\"{}../usart/usart.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+{\ttfamily \#include $<$util/delay.\+h$>$}\newline
+{\ttfamily \#include $<$avr/pgmspace.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{z4_8h_ae05d693db66025dfdebfe4abe182bdb1}{provera\+Imena}} (uint8\+\_\+t ime\mbox{[}$\,$\mbox{]})
+\item 
+uint8\+\_\+t \mbox{\hyperlink{z4_8h_a570ffb4178501627280b0d94fb8511e3}{provera\+Lozinke}} (uint8\+\_\+t lozinka\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{z4_8h_a940cc47a2997be533249bb487bc3e63a}{Provera}} (uint8\+\_\+t p, uint8\+\_\+t k, uint8\+\_\+t ime\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+H fajl pomocnih funkcija. 
+
+\begin{DoxyAuthor}{Author}
+Milos Strizak 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+14.\+05.\+2021. 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{z4_8h_a940cc47a2997be533249bb487bc3e63a}\label{z4_8h_a940cc47a2997be533249bb487bc3e63a}} 
+\index{z4.h@{z4.h}!Provera@{Provera}}
+\index{Provera@{Provera}!z4.h@{z4.h}}
+\doxysubsubsection{\texorpdfstring{Provera()}{Provera()}}
+{\footnotesize\ttfamily void Provera (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{p,  }\item[{uint8\+\_\+t}]{k,  }\item[{uint8\+\_\+t}]{ime\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+funkcija za proveru poklapanja korisnika i lozinke 
+\begin{DoxyParams}{Parameters}
+{\em p} & -\/ korisnicko ime \\
+\hline
+{\em k} & -\/ korisnicka lozinka \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nema povratna vrednost 
+\end{DoxyReturn}
+\mbox{\Hypertarget{z4_8h_ae05d693db66025dfdebfe4abe182bdb1}\label{z4_8h_ae05d693db66025dfdebfe4abe182bdb1}} 
+\index{z4.h@{z4.h}!proveraImena@{proveraImena}}
+\index{proveraImena@{proveraImena}!z4.h@{z4.h}}
+\doxysubsubsection{\texorpdfstring{proveraImena()}{proveraImena()}}
+{\footnotesize\ttfamily uint8\+\_\+t provera\+Imena (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{ime\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+provera\+Imena funkcija za proveru imena 
+\begin{DoxyParams}{Parameters}
+{\em ime} & -\/ korisnicko ime \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+povratna vrednost je uint8\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{z4_8h_a570ffb4178501627280b0d94fb8511e3}\label{z4_8h_a570ffb4178501627280b0d94fb8511e3}} 
+\index{z4.h@{z4.h}!proveraLozinke@{proveraLozinke}}
+\index{proveraLozinke@{proveraLozinke}!z4.h@{z4.h}}
+\doxysubsubsection{\texorpdfstring{proveraLozinke()}{proveraLozinke()}}
+{\footnotesize\ttfamily uint8\+\_\+t provera\+Lozinke (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{lozinka\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+funkcija za proveru lozinke 
+\begin{DoxyParams}{Parameters}
+{\em lozinka} & -\/ korisnicka lozinka \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+povratna vrednost je uint8\+\_\+t 
+\end{DoxyReturn}
