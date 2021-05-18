@@ -1,0 +1,450 @@
+Archive member included because of file (symbol)
+
+C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o)
+                              ./main.o (usartInit)
+C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\pin_driver\Release\libpin_driver.a(pin.o)
+                              ./main.o (pinSetValue)
+C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\timer0\Release\libtimer0.a(timer0.o)
+                              ./main.o (timer0InteruptInit)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                              C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o) (__udivmodsi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o (exit)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              ./main.o (__do_copy_data)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o) (__do_clear_bss)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strcpy.o)
+                              ./main.o (strcpy)
+
+Allocating common symbols
+Common symbol       size              file
+
+Rx_Buffer           0x40              C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o
+LOAD ./main.o
+LOAD C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a
+LOAD C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\pin_driver\Release\libpin_driver.a
+LOAD C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\timer0\Release\libtimer0.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0x812
+ *(.vectors)
+ .vectors       0x00000000       0x68 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00000068                . = ALIGN (0x2)
+                0x00000068                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000068        0x0 linker stubs
+ *(.trampolines*)
+                0x00000068                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000068                __ctors_start = .
+ *(.ctors)
+                0x00000068                __ctors_end = .
+                0x00000068                __dtors_start = .
+ *(.dtors)
+                0x00000068                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000068        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o
+                0x00000068                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000068        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000074       0x16 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x00000074                __do_copy_data
+ .init4         0x0000008a       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x0000008a                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0000009a        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o
+ *(.init9)
+ *(.text)
+ .text          0x000000a2        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o
+                0x000000a2                __vector_22
+                0x000000a2                __vector_1
+                0x000000a2                __vector_24
+                0x000000a2                __vector_12
+                0x000000a2                __bad_interrupt
+                0x000000a2                __vector_6
+                0x000000a2                __vector_3
+                0x000000a2                __vector_23
+                0x000000a2                __vector_25
+                0x000000a2                __vector_11
+                0x000000a2                __vector_13
+                0x000000a2                __vector_17
+                0x000000a2                __vector_19
+                0x000000a2                __vector_7
+                0x000000a2                __vector_5
+                0x000000a2                __vector_4
+                0x000000a2                __vector_9
+                0x000000a2                __vector_2
+                0x000000a2                __vector_21
+                0x000000a2                __vector_15
+                0x000000a2                __vector_8
+                0x000000a2                __vector_10
+                0x000000a2                __vector_16
+                0x000000a2                __vector_20
+ .text          0x000000a6        0x0 ./main.o
+ .text          0x000000a6        0x0 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o)
+ .text          0x000000a6        0x0 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\pin_driver\Release\libpin_driver.a(pin.o)
+ .text          0x000000a6        0x0 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\timer0\Release\libtimer0.a(timer0.o)
+ .text          0x000000a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .text          0x000000a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x000000a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text          0x000000a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text          0x000000a6        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strcpy.o)
+                0x000000a6                . = ALIGN (0x2)
+ *(.text.*)
+ .text.main     0x000000a6      0x29e ./main.o
+                0x000000a6                main
+ .text.__vector_18
+                0x00000344       0x58 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o)
+                0x00000344                __vector_18
+ .text.usartInit
+                0x0000039c       0x40 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o)
+                0x0000039c                usartInit
+ .text.usartAvailable
+                0x000003dc        0x6 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o)
+                0x000003dc                usartAvailable
+ .text.usartPutChar
+                0x000003e2       0x10 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o)
+                0x000003e2                usartPutChar
+ .text.usartPutString
+                0x000003f2       0x1a C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o)
+                0x000003f2                usartPutString
+ .text.usartPutString_P
+                0x0000040c       0x1e C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o)
+                0x0000040c                usartPutString_P
+ .text.usartGetChar
+                0x0000042a       0x38 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o)
+                0x0000042a                usartGetChar
+ .text.usartGetString
+                0x00000462       0x3c C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o)
+                0x00000462                usartGetString
+ .text.usartPeek
+                0x0000049e       0x1a C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o)
+                0x0000049e                usartPeek
+ .text.usartParseInt
+                0x000004b8       0xf0 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o)
+                0x000004b8                usartParseInt
+ .text.pinSetValue
+                0x000005a8       0xa6 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\pin_driver\Release\libpin_driver.a(pin.o)
+                0x000005a8                pinSetValue
+ .text.pinInit  0x0000064e       0xa6 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\pin_driver\Release\libpin_driver.a(pin.o)
+                0x0000064e                pinInit
+ .text.__vector_14
+                0x000006f4       0x4a C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\timer0\Release\libtimer0.a(timer0.o)
+                0x000006f4                __vector_14
+ .text.timer0InteruptInit
+                0x0000073e       0x14 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\timer0\Release\libtimer0.a(timer0.o)
+                0x0000073e                timer0InteruptInit
+ .text.timer0millis
+                0x00000752       0x1a C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\timer0\Release\libtimer0.a(timer0.o)
+                0x00000752                timer0millis
+ .text.timer0DelayMs
+                0x0000076c       0x50 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\timer0\Release\libtimer0.a(timer0.o)
+                0x0000076c                timer0DelayMs
+ .text.libgcc   0x000007bc       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x000007bc                __udivmodsi4
+ .text.libgcc   0x00000800        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00000800        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000800        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x00000800        0xe c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strcpy.o)
+                0x00000800                strcpy
+                0x0000080e                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000080e        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x0000080e                exit
+                0x0000080e                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000080e        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00000812                _etext = .
+
+.data           0x00800100       0x86 load address 0x00000812
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800100        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o
+ .data          0x00800100       0x86 ./main.o
+ .data          0x00800186        0x0 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o)
+ .data          0x00800186        0x0 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\pin_driver\Release\libpin_driver.a(pin.o)
+ .data          0x00800186        0x0 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\timer0\Release\libtimer0.a(timer0.o)
+ .data          0x00800186        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .data          0x00800186        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800186        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x00800186        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00800186        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strcpy.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800186                . = ALIGN (0x2)
+                0x00800186                _edata = .
+                0x00800186                PROVIDE (__data_end, .)
+
+.bss            0x00800186       0x47
+                0x00800186                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800186        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm328p.o
+ .bss           0x00800186        0x0 ./main.o
+ .bss           0x00800186        0x0 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o)
+ .bss           0x00800186        0x0 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\pin_driver\Release\libpin_driver.a(pin.o)
+ .bss           0x00800186        0x0 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\timer0\Release\libtimer0.a(timer0.o)
+ .bss           0x00800186        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .bss           0x00800186        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800186        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00800186        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00800186        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(strcpy.o)
+ *(.bss*)
+ .bss.Rx_Buffer_Size
+                0x00800186        0x1 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o)
+                0x00800186                Rx_Buffer_Size
+ .bss.Rx_Buffer_First
+                0x00800187        0x1 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o)
+                0x00800187                Rx_Buffer_First
+ .bss.Rx_Buffer_Last
+                0x00800188        0x1 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o)
+                0x00800188                Rx_Buffer_Last
+ .bss.ms        0x00800189        0x4 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\timer0\Release\libtimer0.a(timer0.o)
+                0x00800189                ms
+ *(COMMON)
+ COMMON         0x0080018d       0x40 C:\milos\letnji semstar\Razvoj softvera za digitalne mikrokontrolere\git repository\RSZDMK\usart\Release\libusart.a(usart.o)
+                0x0080018d                Rx_Buffer
+                0x008001cd                PROVIDE (__bss_end, .)
+                0x00000812                __data_load_start = LOADADDR (.data)
+                0x00000898                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x008001cd        0x0
+                0x008001cd                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x008001cd                PROVIDE (__noinit_end, .)
+                0x008001cd                _end = .
+                0x008001cd                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(Vezba10_zadatak2.elf elf32-avr)
+LOAD linker stubs
