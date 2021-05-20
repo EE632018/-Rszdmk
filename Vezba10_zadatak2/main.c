@@ -2,7 +2,9 @@
 #include "../timer0/timer0.h"
 #include "../pin_driver/pin.h"
 #include <string.h>
-
+#include <stdint.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 int main()
 {
@@ -37,151 +39,171 @@ int main()
 
 		switch(state)
 		{
-			/// CF0U
-			case CF0U:
-				sprintf(tmp, "STANJE CF0U\r\n");
-				usartPutString(tmp);
+		/// CF0U
+		case CF0U:
+			while(usartAvailable() == 0);
+			c = usartGetChar();
+			sprintf(tmp, "STANJE CF0U \r\n");
+			usartPutString(tmp);
 
-				pinSetValue(PORT_B, 5, HIGH);
-				state = CF1;
-				break;
+			pinSetValue(PORT_B, 5, HIGH);
+			state = CF1;
+			break;
 			/// CF1
-			case CF1:
-				sprintf(tmp, "STANJE CF1\r\n");
-				usartPutString(tmp);
+		case CF1:
+			while(usartAvailable() == 0);
+			c = usartGetChar();
+			sprintf(tmp, "STANJE CF1\r\n");
+			usartPutString(tmp);
 
-				for(int i = 0; i < 3; i++)
-				{
-					pinSetValue(PORT_B, 5, HIGH);
-					timer0DelayMs(1000);
-					pinSetValue(PORT_B, 5, LOW);
-					if(i != 2)
-						timer0DelayMS(1000);
-				}
-				state = OF1;
-				break;
+			for(int i = 0; i < 3; i++)
+			{
+				pinSetValue(PORT_B, 5, HIGH);
+				timer0DelayMs(1000);
+				pinSetValue(PORT_B, 5, LOW);
+				if(i != 2)
+					timer0DelayMS(1000);
+			}
+			state = OF1;
+			break;
 			/// CF2D
-			case CF2D:
-				sprintf(tmp, "STANJE CF2D\r\n");
-				usartPutString(tmp);
+		case CF2D:
+			while(usartAvailable() == 0);
+			c = usartGetChar();
+			sprintf(tmp, "STANJE CF2D\r\n");
+			usartPutString(tmp);
 
-				pinSetValue(PORT_B, 5, HIGH);
+			pinSetValue(PORT_B, 5, HIGH);
 
-				state = CF1;
-				break;
+			state = CF1;
+			break;
 			/// OF1
-			case OF1:
-				sprintf(tmp, "STANJE OF1\r\n");
-				usartPutString(tmp);
-				if(c == 'D')
-				{
-					pinSetValue(PORT_B, 5, HIGH);
-					timer0DelayMs(1000);
-					pinSetValue(PORT_B, 5, LOW);
+		case OF1:
+			while(usartAvailable() == 0);
+			c = usartGetChar();
+			sprintf(tmp, "STANJE OF1\r\n");
+			usartPutString(tmp);
+			if(c == 'D')
+			{
+				pinSetValue(PORT_B, 5, HIGH);
+				timer0DelayMs(1000);
+				pinSetValue(PORT_B, 5, LOW);
 
-					state = CF1D;
-				}
-				else if(c == 'U')
-				{
-					pinSetValue(PORT_B, 5, HIGH);
-					timer0DelayMs(1000);
-					pinSetValue(PORT_B, 5, LOW);
+				state = CF1D;
+			}
+			else if(c == 'U')
+			{
+				pinSetValue(PORT_B, 5, HIGH);
+				timer0DelayMs(1000);
+				pinSetValue(PORT_B, 5, LOW);
 
-					state = CF1D;
-				}
-				else
-				{
-					state = OF1;
-				}
-				break;
+				state = CF1D;
+			}
+			else
+			{
+				state = OF1;
+			}
+			break;
 			/// OF2
-			case OF2:
-				sprintf(tmp, "STANJE OF2\r\n");
-				usartPutString(tmp);
+		case OF2:
+			while(usartAvailable() == 0);
+			c = usartGetChar();
+			sprintf(tmp, "STANJE OF2\r\n");
+			usartPutString(tmp);
 
-				if(c == 'D')
-				{
-					pinSetValue(PORT_B, 5, HIGH);
-					timer0DelayMs(1000);
-					pinSetValue(PORT_B, 5, LOW);
+			if(c == 'D')
+			{
+				pinSetValue(PORT_B, 5, HIGH);
+				timer0DelayMs(1000);
+				pinSetValue(PORT_B, 5, LOW);
 
-					state = CF2D;
-				}
-				else
-				{
-					state = OF2;
-				}
-				break;
+				state = CF2D;
+			}
+			else
+			{
+				state = OF2;
+			}
+			break;
 			/// OF0
-			case OF0:
-				sprintf(tmp, "STANJE OF0\r\n");
-				usartPutString(tmp);
+		case OF0:
+			while(usartAvailable() == 0);
+			c = usartGetChar();
+			sprintf(tmp, "STANJE OF0\r\n");
+			usartPutString(tmp);
 
-				if(c == 'U')
-				{
-					pinSetValue(PORT_B, 5, HIGH);
-					timer0DelayMs(1000);
-					pinSetValue(PORT_B, 5, LOW);
+			if(c == 'U')
+			{
+				pinSetValue(PORT_B, 5, HIGH);
+				timer0DelayMs(1000);
+				pinSetValue(PORT_B, 5, LOW);
 
-					state = CF0U;
-				}
-				else
-				{
-					state = OF0;
-				}
-				break;
+				state = CF0U;
+			}
+			else
+			{
+				state = OF0;
+			}
+			break;
 			/// CF0
-			case CF0:
-				sprintf(tmp, "STANJE CF0\r\n");
-				usartPutString(tmp);
+		case CF0:
+			while(usartAvailable() == 0);
+			c = usartGetChar();
+			sprintf(tmp, "STANJE CF0\r\n");
+			usartPutString(tmp);
 
-				for(int i =0; i < 3; i++)
+			for(int i =0; i < 3; i++)
+			{
+				pinSetValue(PORT_B, 5, HIGH);
+				timer0DelayMs(1000);
+				pinSetValue(PORT_B, 5, LOW);
+				if(i != 2)
 				{
-					pinSetValue(PORT_B, 5, HIGH);
 					timer0DelayMs(1000);
-					pinSetValue(PORT_B, 5, LOW);
-					if(i != 2)
-					{
-						timer0DelayMs(1000);
-					}
 				}
-				state = OF0;
-				break;
+			}
+			state = OF0;
+			break;
 			/// CF1D
-			case CF1D:
-				sprintf(tmp, "STANJE CF1D\r\n");
-				usartPutString(tmp);
+		case CF1D:
+			while(usartAvailable() == 0);
+			c = usartGetChar();
+			sprintf(tmp, "STANJE CF1D\r\n");
+			usartPutString(tmp);
 
-				pinSetValue(PORT_B, 5, HIGH);
+			pinSetValue(PORT_B, 5, HIGH);
 
-				state = CF0;
-				break;
+			state = CF0;
+			break;
 			/// CF1U
-			case CF1U:
-				sprintf(tmp, "STANJE CF1U\r\n");
-				usartPutString(tmp);
+		case CF1U:
+			while(usartAvailable() == 0);
+			c = usartGetChar();
+			sprintf(tmp, "STANJE CF1U\r\n");
+			usartPutString(tmp);
 
-				pinSetValue(PORT_B, 5, HIGH);
+			pinSetValue(PORT_B, 5, HIGH);
 
-				state = CF2;
-				break;
+			state = CF2;
+			break;
 			/// CF2
-			case CF2:
-				sprintf(tmp, "STANJE CF2\r\n");
-				usartPutString(tmp);
+		case CF2:
+			while(usartAvailable() == 0);
+			c = usartGetChar();
+			sprintf(tmp, "STANJE CF2\r\n");
+			usartPutString(tmp);
 
-				for(int i =0; i < 3; i++)
+			for(int i =0; i < 3; i++)
+			{
+				pinSetValue(PORT_B, 5, HIGH);
+				timer0DelayMs(1000);
+				pinSetValue(PORT_B, 5, LOW);
+				if(i != 2)
 				{
-					pinSetValue(PORT_B, 5, HIGH);
 					timer0DelayMs(1000);
-					pinSetValue(PORT_B, 5, LOW);
-					if(i != 2)
-					{
-						timer0DelayMs(1000);
-					}
 				}
-				state = OF0;
-				break;
+			}
+			state = OF0;
+			break;
 		}
 
 	}
